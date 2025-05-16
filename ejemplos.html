@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="Author" content="Equipo 6"/><!--Autor-->
+	 
+	<meta name="Description" content="Estudio General del Sistema"/><!--Descripción del tutorial-->
+	<meta name="Keywords" content="Factores, Estudio, General, Sistema"/><!--Palabras clave-->
+	<meta name="robots" content="noindex, nofollow"/>
+	
+	<script src="media/js/jq.js" type="text/javascript"></script>
+	<script src="media/js/m.js" type="text/javascript"></script>
+	<script src="media/js/ui.js" type="text/javascript"></script>
+	
+	<link rel="stylesheet" href="media/css/ui.css" type="text/css" />
+	<link rel="stylesheet" href="media/css/ejemplos.css" type="text/css" />
+
+	<script>
+		function toggleVisibility(id) {
+			var element = document.getElementById(id);
+			if (element.style.display === 'none' || element.style.display === '') {
+				element.style.display = 'block';
+			} else {
+				element.style.display = 'none';
+			}
+		}
+	</script>
+</head>
+<body>
+	<section class="main clearfix">
+		<section class="top">	
+            <div class="wrapper content_header clearfix">
+                <center><h1 class="title"><br><h1><t>4. EJEMPLOS</t></center>
+			</div>
+        </section>
+
+		<section class="wrapper">
+			<div class="content"> 
+                <ul>
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>1. Resolver la función Booleana como producto MAXTERM:</h3></li>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText1'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>F(a,b,c)=a+b´*c</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText1">
+                    <p>
+                    <h4>
+                        Primero, se obtiene la tabla de verdad de la función y luego se toman los MAXTERM. Enseguida, se evalúa la función para todas las combinaciones y se toman los MAXTERM de la tabla para los cuales la función lógica vale 0. 
+                        <br><br>
+                        <img src="media/img/Ejercicio_1.jpg" border="0" width="650" alt="">
+		                <center><small>(Ejercicio 1)</small></center>
+                        Por lo tanto, la respuesta es:
+                        <br>
+                        F(a,b,c) = (a + b + c)(a + b´ + c)(a +b´ + c´)
+                        <br><br>
+                        También se puede expresar como:
+                        <br>
+                        F(a,b,c) = II M (0,2,3)
+                        <br><br>
+                        Por lo que el producto de los MAXTERM es 0,2,3.
+                    </h4>
+                    </p>
+                </div>
+
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>2. Hallar la expresión booleana minimizada:</h3></li>
+                    <img src="media/img/Ejercicio_2.jpg" border="0" width="650" alt="">
+		            <center><small>(Tabla de verdad)</small></center>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText2'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>Solución</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText2">
+                    <p>
+                    <h4>
+                        Paso 1. Hallar los Minitérminos:
+                        <br>
+                        F = A’B’C’ + A’B’C + A’BC’ + A’BC + AB’C’ + AB’C + ABC’ + ABC
+                        <br><br>
+                        Paso 2. Simplificar mediante las propiedades hasta llegar a la expresión mínima:
+                        <br>
+                        F = A’B’(C’+C) + A’BC’ + A’BC + AB’C’ + AB’C + AB(C’ + C)
+                        <br>
+                        F = A’B’ + A’BC’ + A’BC + AB’(C’ + C) + AB
+                        <br>
+                        F = A’B’ + A’B + AB’ + AB
+                        <br>
+                        Finalmente la expresión queda: 1
+                    </h4>
+                    </p>
+                </div>
+
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>3. Expresar como una suma de MINTERM:</h3></li>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText3'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>F(a,b,c)=a+b´*c</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText3">
+                    <p>
+                    <h4>
+                        Primero se obtiene la tabla de verdad y luego se toman los MINTERM. Posteriormente, se evalúa la función para todas las combinaciones y se toman los MINTERM de la tabla para los cuales la función vale 1.
+                        <img src="media/img/Ejercicio_3.jpg" border="0" width="650" alt="">
+		                <center><small>(Ejercicio 3)</small></center>
+                        <br><br>
+                        Por lo tanto, la respuesta es:
+                        <br>
+                        F(a,b,c)=a’b’c+ab’c’+ab’c+abc’+abc
+                        <br><br>
+                        Otra notación que se puede utilizar es:
+                        <br>
+                        F(a,b,c)=∑m(1,4,5,6,7)
+                        <br><br>
+                        Lo que significa la suma de los MINTERM 1,4,5,6,7.
+                    </h4>
+                    </p>
+                </div>
+
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>4. Usando el método Quine-McCluskey:</h3></li>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText4'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>F(a,b,c,d,e)= ∑m(1,2,3,5,9,10,11,18,19,20,21,23,25,26,27)</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText4">
+                    <p>
+                    <h4>
+                        Tabla de combinaciones
+                        <img src="media/img/Ejercicio_40.jpg" border="0" width="650" alt="">
+                        <br>
+                        <img src="media/img/Ejercicio_41.jpg" border="0" width="650" alt="">
+                        <br>
+                        <img src="media/img/Ejercicio_42.jpg" border="0" width="650" alt="">
+                        <br>
+                        <img src="media/img/Ejercicio_43.jpg" border="0" width="650" alt="">
+                        <br>
+                        <img src="media/img/Ejercicio_44.jpg" border="0" width="650" alt="">
+                        <br>
+                        <img src="media/img/Ejercicio_45.jpg" border="0" width="650" alt="">
+                        <br>
+                        <img src="media/img/Ejercicio_46.jpg" border="0" width="650" alt="">
+                        <br>
+		                <center><small>(Tabla de convinaciones)</small></center>
+                        <br><br>
+                        Implicantes primos esenciales:
+                        <br>
+                        1010X→AB’CD’
+                        <br>
+                        X10X1→BC’E’
+                        <br>
+                        XX01X→C’D
+                        <br><br>
+                        Una vez que tenemos los implicantes primos esenciales, ya tenemos una parte de la función simplificada. Ahora tendremos que ver los implicantes primos secundarios que tienen menor costo, es decir, que tienen menos variables en el término.
+                        <br><br>
+                        Teorema: 'Sean a y b dos términos implicantes primos de una tabla reducida de tal manera que el costo de a sea menor o igual al costo de b. Entonces, si a domina a b o si a y b son intercambiables existe una suma mínima de productos que no incluye a b.
+                        <br><br>
+                        Utilizamos los implicantes que no se han tomado en cuenta como implicantes primos esenciales, con las columnas que no han sido eliminadas de la tabla de simplificación de los implicantes primos para buscar los implicantes primos secundarios.
+                        <img src="media/img/Ejercicio_47.jpg" border="0" width="650" alt="">
+                        <br><br>
+                        El implicante primo 00X01 cubre el mintérmino mi y el mintérmino m5 mientras que el implicante primo X0101 cubre únicamente al mintérmino m5 entre estos dos el que tiene menos costo es el 00X01, luego el implicante 10X11 y 101X1 ambos cubren únicamente al mintérmino m2s tomamos cualquiera de los dos.
+                        <img src="media/img/Ejercicio_48.jpg" border="0" width="650" alt="">
+                        <br><br>
+                        Implicantes primos secundarios:
+                        <br>
+                        00X01→A’B’D’E 10X11→AB’DE
+                        <br><br>
+                        Como se puede observar, existen implicantes primos esenciales y secundarios. La función resultante simplificada es la operación OR de todos estos implicantes.
+                        <br><br>
+                        F(A, B, C, D, E) = AB'CD' + BC’E + C'D + A'B'D'E + AB'DE
+                    </h4>
+                    </p>
+                </div>
+
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>5. Obtener la expresión mínima con el método de Karnaugh:</h3></li>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText5'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>F(A,B,C)=ABC' + A'BC' + ABC + AB'C</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText5">
+                    <p>
+                    <h4>
+                        Para construir el diagrama de Karnaugh, se hace una tabla de verdad para visualizar de forma binaria los minitérminos de la fórmula booleana.
+                        <img src="media/img/Ejercicio_5.jpg" border="0" width="650" alt="">
+		                <center><small>(Ejercicio 5)</small></center>
+                        <br><br>
+                        Se construye el diagrama de Karnaugh para una función booleana de tres variables.
+                        <img src="media/img/Ejercicio_51.jpg" border="0" width="650" alt="">
+		                <center><small>(Diagrama_5)</small></center>
+                        <br><br>
+                        Se colocan números uno en los recuadros donde los valores de las variables coinciden con los que están en la tabla de verdad, que, además, a su vez, tienen un número uno en la columna de salida. Las casillas vacías se rellenan con ceros.
+                        <img src="media/img/Ejercicio_52.jpg" border="0" width="650" alt="">
+		                <center><small>(diagrama_52)</small></center>
+                        <br><br>
+                        Se marcan las adyacencias que se identifiquen.
+                        <img src="media/img/Ejercicio_53.jpg" border="0" width="650" alt="">
+		                <center><small>(diagrama_53)</small></center>
+                        <br><br>
+                        Para transcribir las adyacencias a minitérminos, se verifica que los valores de las variables en el diagrama de Karnaugh se mantienen constantes. Por ejemplo, la adyacencia gris tiene a A como constante con 1, pero B no lo es, por lo que no se agrega. C sí lo es. Se hace el mismo análisis con la otra adyacencia para obtener la fórmula minimizada.
+                        <img src="media/img/Ejercicio_54.jpg" border="0" width="650" alt="">
+		                <center><small>(Formula 1)</small></center>
+                        <br><br>
+                        Los minitérminos obtenidos se conectan con sumas para obtener una función en una forma normal disyuntiva.
+                    </h4>
+                    </p>
+                </div>
+
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>6. Obtener la expresión mínima de la siguiente fórmula booleana:</h3></li>
+                    <img src="media/img/Ejercicio_6.jpg" border="0" width="650" alt="">
+		                <center><small>(Formula 6)</small></center>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText6'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>Solución</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText6">
+                    <p>
+                    <h4>
+                        Para construir el diagrama de Karnaugh, se hace una tabla de verdad para visualizar de forma binaria los minitérminos de la fórmula booleana.
+                        <img src="media/img/Ejercicio_61.jpg" border="0" width="650" alt="">
+		                <center><small>(Tabla de verdad)</small></center>
+                        <br><br>
+                        Se construye el diagrama de Karnaugh para una función booleana de tres variables.
+                        <img src="media/img/Ejercicio_62.jpg" border="0" width="650" alt="">
+		                <center><small>(Diagrama de Karnaugh)</small></center>
+                        <br><br>
+                        Se colocan números uno en los recuadros donde los valores de las variables coinciden con los que están en la tabla de verdad, que, además, a su vez, tienen un número uno en la columna de salida. Las casillas vacías se rellenan con ceros.
+                        <img src="media/img/Ejercicio_63.jpg" border="0" width="650" alt="">
+		                <center><small>(Diagrama de Karnaugh lleno)</small></center>
+                        <br><br>
+                        Se marcan las adyacencias que se identifiquen.
+                        <img src="media/img/Ejercicio_64.jpg" border="0" width="650" alt="">
+		                <center><small>(Diagrama marcado)</small></center>
+                        <br><br>
+                        Para transcribir las adyacencias a minitérminos, se verifica que los valores de las variables en el diagrama de Karnaugh se mantienen constantes. Por ejemplo, la adyacencia verde tiene a A, B y D constantes, pero no a C. Por lo tanto, la C se ignora, y las demás variables se incluyen en la forma minimizada.
+                        <img src="media/img/Ejercicio_65.jpg" border="0" width="650" alt="">
+		                <center><small>(formula 3)</small></center>
+                        <br><br>
+                        Los minitérminos obtenidos se conectan con sumas para obtener una función en una forma normal disyuntiva.
+                    </h4>
+                    </p>
+                </div>
+
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>7. Expresar la función booleana como una suma de MINTERM:</h3></li>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText7'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>F(a,b,c) = a + b´ * c</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText7">
+                    <p>
+                    <h4>
+                        <img src="media/img/Ejercicio_7.jpg" border="0" width="650" alt="">
+		                <center><small>(Ejercicio 7)</small></center>
+                    </h4>
+                    </p>
+                </div>
+
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>8. Sea la función lógica:</h3></li>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText8'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>F(a,b,c) = a * (b + c)</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText8">
+                    <p>
+                    <h4>
+                        Obtener los MINTERMS y MAXTERMS asociados.
+                        <img src="media/img/Ejercicio_8.jpg" border="0" width="650" alt="">
+		                <center><small>(Ejercicio 8)</small></center>
+                    </h4>
+                    </p>
+                </div>
+
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>9. Expresar la función booleana como un producto MAXTERM:</h3></li>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText9'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>F(a,b,c) = a + b’ * c</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText9">
+                    <p>
+                    <h4>
+                        Primero, se obtiene la tabla de verdad de la función y luego se toman los MAXTERM desde dicha tabla de verdad. Enseguida, se evalúa la función para todas las combinaciones y se toman los MAXTERM de la tabla para los cuales la función lógica vale 0.
+                        <img src="media/img/Ejercicio_9.jpg" border="0" width="650" alt="">
+		                <center><small>(Ejercicio 9)</small></center>
+                        <br><br>
+                        Entonces la respuesta es:
+                        <br>
+                        F(a,b,c) = (a + b + c)(a + b’ + c)(a + b’ + c’)
+                        <br><br>
+                        Que puede expresarse como:
+                        <br>
+                        F(a,b,c) = m (0,2,3)
+                    </h4>
+                    </p>
+                </div>
+
+                    <p>━━━━━━━━━━━━━━━━━━━ ◦ ❖ ◦ ━━━━━━━━━━━━━━━━━</p>
+                    <li><h3>10. Demuestra la siguiente equivalencia booleana:</h3></li>
+                    <br><a href="#" onclick="toggleVisibility('hiddenText10'); return false;" style="display: block; font-weight: bold; color: #000000; background-color: #f6aa1c; border: 1px solid #ffffff; border-radius: 10px; text-align: center; width: auto; height: 70px ">
+                    <strong><br> ❖ &emsp;<i>XYZ + XZ + Z = Z</i></strong>
+                </a>
+                <div style="display: none; margin-top: 10px;" id="hiddenText10">
+                    <p>
+                    <h4>
+                        XYZ + XZ + Z = XYZ + Z (X+1)
+                        <br>
+                        = XYZ + Z (1)
+                        <br>
+                        = XYZ + Z
+                        <br>
+                        = Z (XY + 1)
+                        <br>
+                        = Z (1)
+                        <br>
+                        = Z
+                    </h4>
+                    </p>
+                </div>
+                <br><br><br><br>
+			</div>
+		</section>
+	</section>
+</body>
+</html>
